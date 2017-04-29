@@ -76,7 +76,7 @@ class InstallTheme extends Command
         $this->info(sprintf("Installing theme %s", $theme));
 
         $process = new Process(sprintf('composer require "%s"', $theme));
-        $process->setTty(true);
+        //$process->setTty(true);
         $process->run(function ($type, $buffer) {
             if ('err' === $type) {
                 echo $buffer;
